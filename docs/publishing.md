@@ -1,6 +1,42 @@
 # Publishing Guide
 
-## PyPI Publication
+## Automated Publishing (Recommended)
+
+Releases are automatically published to PyPI when you create a GitHub release.
+
+### Steps
+
+1. Bump version in both files:
+   - `pyproject.toml`
+   - `src/mcp_refactoring/__init__.py`
+
+2. Commit and push:
+   ```bash
+   git add -A && git commit -m "Bump version to X.Y.Z" && git push
+   ```
+
+3. Create a GitHub release:
+   ```bash
+   gh release create vX.Y.Z --title "vX.Y.Z" --notes "Release notes here"
+   ```
+   Or via https://github.com/marshally/mcp-refactoring/releases/new
+
+4. The workflow automatically builds and publishes to PyPI.
+
+### Configuration
+
+The workflow uses PyPI trusted publishing (OIDC) - no API tokens needed.
+
+Setup is in:
+- `.github/workflows/python-publish.yml` - GitHub Actions workflow
+- GitHub repo settings → Environments → `pypi`
+- PyPI project settings → Publishing → Trusted publisher
+
+---
+
+## Manual Publishing
+
+For manual releases or troubleshooting.
 
 ### Prerequisites
 
@@ -107,9 +143,16 @@ After publishing, users can install via:
 
 ## Version Bumping
 
-Edit `pyproject.toml`:
-```toml
-version = "0.2.0"
-```
+Update version in both files:
 
-Then rebuild and upload.
+1. `pyproject.toml`:
+   ```toml
+   version = "0.2.0"
+   ```
+
+2. `src/mcp_refactoring/__init__.py`:
+   ```python
+   __version__ = "0.2.0"
+   ```
+
+Then commit and create a release (automated) or rebuild and upload (manual).
