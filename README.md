@@ -1,5 +1,7 @@
 # mcp-refactoring
 
+<!-- mcp-name: io.github.marshally/mcp-refactoring -->
+
 An MCP (Model Context Protocol) server that exposes Martin Fowler's refactoring catalog to LLMs through a pluggable, language-agnostic architecture.
 
 ## Features
