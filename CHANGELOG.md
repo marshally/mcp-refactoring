@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CHANGELOG.md following Keep a Changelog format
 - AGENTS.md with instructions for AI coding agents
 - Documented automated GitHub Actions publishing workflow
+- server.json for MCP registry publishing
+- mcp-name tag in README for MCP registry validation
 
 ## [0.1.1] - 2025-11-29
 

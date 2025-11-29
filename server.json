@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+  "name": "io.github.marshally/mcp-refactoring",
+  "title": "Refactoring MCP Server",
+  "description": "MCP server exposing Martin Fowler's refactoring catalog to LLMs with 71+ refactorings",
+  "repository": {
+    "url": "https://github.com/marshally/mcp-refactoring.git",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "mcp-refactoring",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
