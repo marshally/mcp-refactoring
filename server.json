@@ -7,12 +7,12 @@
     "url": "https://github.com/marshally/mcp-refactoring.git",
     "source": "github"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "mcp-refactoring",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "transport": {
         "type": "stdio"
       }
